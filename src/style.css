@@ -21,10 +21,8 @@ body {
   color: var(--clr-light);
   display: grid;
   grid:
-    'header header header header' auto '...... lists  active ......' auto/1fr minmax(
-      100px,
-      300px
-    )
+    'header header header header' auto
+    '...... lists  active ......' auto/1fr minmax(100px, 300px)
     minmax(250px, 500px) 1fr;
 }
 
@@ -280,4 +278,10 @@ form {
 
 .red-icon {
   color: red;
+}
+
+.priority {
+  position: absolute;
+  right: 0px;
+  font-size: 0.7em;
 }
