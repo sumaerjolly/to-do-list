@@ -73,18 +73,35 @@
         </div>
 
         <div class="new-task-creator">
-          <form action="">
-            <input
-              type="text"
-              class="new task"
-              placeholder="new task name"
-              aria-label="new task name"
+            <button id = 'formBtn' class="btn create" aria-label="create new task">+ <span id = 'btnSpan'>  Add new task</span></button><br>
+          <form id = 'form' action="POST">
+            <div class = 'inputDiv'>
+              <input
+                type="text"
+                class="new task"
+                placeholder="new task name"
+                aria-label="new task name"
+              />
+            </div>
+            <div class = 'inputDiv'>
+              <input
+                type="text"
+                placeholder="new task description"
+                class="new task"
+              />
+            </div>
+            <div class = 'inputDiv'>
+            <input 
+              type="date" name="" id="" class="new task"
             />
-            <button class="btn create" aria-label="create new task">+</button>
-            <input type="text" placeholder="new task description" />
-            <input type="date" name="" id="" />
-            <input type="checkbox" name="priority" id="priority" />
-            <label for="priority">priority</label>
+            </div>
+            <div class = 'inputDiv'>
+              <input
+                type="checkbox" name="priority" id="priority"
+              />
+              <label class = 'formLabel' for = 'priority'>Priority</label>
+            </div>
+            
           </form>
         </div>
 
