@@ -1,3 +1,3 @@
 import './style.css';
-
-console.log('Everything working hopefully');
+import Project from './project.js';
+import ToDo from './todo.js';
