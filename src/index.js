@@ -1,1 +1,3 @@
-alert('this is an alert');
+import './style.css';
+
+console.log('Everything working hopefully');
