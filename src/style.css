@@ -292,8 +292,8 @@ body {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -35px;
-  color: var(--clr-light);
+  bottom: -70px;
+  color: black;
 }
 
 .red-icon {
@@ -302,16 +302,34 @@ body {
 
 .priority {
   position: absolute;
-  right: 0px;
+  right: 20px;
   font-size: 0.5em;
 }
 
-.delete-icon {
+.edit-task {
   position: absolute;
-  right: 20px;
+  right: 60px;
   font-size: 0.5em;
 }
 
 #task-priority {
   opacity: 1;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.delete-task-button {
+  display: block;
+}
+
+.complete-task {
+  position: absolute;
+  right: 20px;
+  font-size: 0.5em;
 }
