@@ -69,8 +69,7 @@ function deleteTasks(selectedList) {
   for (let i = 0; i < deleteTaskButton.length; i += 1) {
     deleteTaskButton[i].addEventListener('click', () => {
       const deleteTest = selectedList.tasks.findIndex(
-        (task) => task.id === deleteTaskButton[i].parentNode.parentNode.id,
-      );
+        (task) => task.id === deleteTaskButton[i].parentNode.parentNode.id);
       selectedList.tasks.splice(deleteTest, 1);
       saveAndRender(); // eslint-disable-line
     });
@@ -82,8 +81,7 @@ function completeTasks(selectedList) {
   for (let i = 0; i < completeTaskButton.length; i += 1) {
     completeTaskButton[i].addEventListener('click', () => {
       const changeCompletion = selectedList.tasks.find(
-        (task) => task.id === completeTaskButton[i].parentNode.parentNode.id,
-      );
+        (task) => task.id === completeTaskButton[i].parentNode.parentNode.id);
       changeCompletion.complete = true;
       saveAndRender(); // eslint-disable-line
     });
@@ -101,8 +99,7 @@ function editTasks(selectedList) {
       overlay.classList.remove('hidden');
       overlay.classList.add('active');
       const taskToEdit = selectedList.tasks.find(
-        (task) => task.id === editTaskButton[i].parentNode.parentNode.id,
-      );
+        (task) => task.id === editTaskButton[i].parentNode.parentNode.id);
       const editTitle = document.querySelector('#edit-title');
       editTitle.value = taskToEdit.name;
       const editDescription = document.querySelector('#edit-description');
