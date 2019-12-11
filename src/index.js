@@ -11,7 +11,7 @@ const newListForm = document.querySelector('[data-new-list-form]');
 const newListInput = document.querySelector('[data-new-list-input]');
 const deleteListButton = document.querySelector('[data-delete-list-button]');
 const listDisplayContainer = document.querySelector(
-  '[data-list-display-container]',);
+  '[data-list-display-container]');
 const listTitleElement = document.querySelector('[data-list-title]');
 const listCountElement = document.querySelector('[data-list-count]');
 const taskTemplte = document.getElementById('task-template');
