@@ -20,8 +20,7 @@ const tasksContainer = document.querySelector('[data-tasks]');
 const formDisplayButton = document.getElementById('formBtn');
 const showForm = document.getElementById('form');
 const clearCompleteTasksButton = document.querySelector(
-  '[data-clear-complete-tasks-button]',
-);
+  '[data-clear-complete-tasks-button]');
 
 function clearElement(element) {
   while (element.firstChild) {
