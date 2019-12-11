@@ -11,7 +11,8 @@ const newListForm = document.querySelector('[data-new-list-form]');
 const newListInput = document.querySelector('[data-new-list-input]');
 const deleteListButton = document.querySelector('[data-delete-list-button]');
 const listDisplayContainer = document.querySelector(
-  '[data-list-display-container]');
+  '[data-list-display-container]',
+);
 const listTitleElement = document.querySelector('[data-list-title]');
 const listCountElement = document.querySelector('[data-list-count]');
 const taskTemplte = document.getElementById('task-template');
@@ -20,7 +21,8 @@ const tasksContainer = document.querySelector('[data-tasks]');
 const formDisplayButton = document.getElementById('formBtn');
 const showForm = document.getElementById('form');
 const clearCompleteTasksButton = document.querySelector(
-  '[data-clear-complete-tasks-button]');
+  '[data-clear-complete-tasks-button]',
+);
 
 function clearElement(element) {
   while (element.firstChild) {
@@ -69,7 +71,8 @@ function deleteTasks(selectedList) {
   for (let i = 0; i < deleteTaskButton.length; i += 1) {
     deleteTaskButton[i].addEventListener('click', () => {
       const deleteTest = selectedList.tasks.findIndex(
-        (task) => task.id === deleteTaskButton[i].parentNode.parentNode.id);
+        (task) => task.id === deleteTaskButton[i].parentNode.parentNode.id,
+      );
       selectedList.tasks.splice(deleteTest, 1);
       saveAndRender(); // eslint-disable-line
     });
@@ -81,7 +84,8 @@ function completeTasks(selectedList) {
   for (let i = 0; i < completeTaskButton.length; i += 1) {
     completeTaskButton[i].addEventListener('click', () => {
       const changeCompletion = selectedList.tasks.find(
-        (task) => task.id === completeTaskButton[i].parentNode.parentNode.id);
+        (task) => task.id === completeTaskButton[i].parentNode.parentNode.id,
+      );
       changeCompletion.complete = true;
       saveAndRender(); // eslint-disable-line
     });
@@ -99,7 +103,8 @@ function editTasks(selectedList) {
       overlay.classList.remove('hidden');
       overlay.classList.add('active');
       const taskToEdit = selectedList.tasks.find(
-        (task) => task.id === editTaskButton[i].parentNode.parentNode.id);
+        (task) => task.id === editTaskButton[i].parentNode.parentNode.id,
+      );
       const editTitle = document.querySelector('#edit-title');
       editTitle.value = taskToEdit.name;
       const editDescription = document.querySelector('#edit-description');
@@ -201,7 +206,8 @@ clearCompleteTasksButton.addEventListener('click', () => {
 
 const newTaskTitle = document.querySelector('[data-new-task-title]');
 const newTaskDescription = document.querySelector(
-  '[data-new-task-description]');
+  '[data-new-task-description]',
+);
 const newTaskDueDate = document.querySelector('[data-new-task-dueDate]');
 const newTaskPriority = document.querySelector('[data-new-task-priority]');
 const submitForm = document.getElementById('submit');
