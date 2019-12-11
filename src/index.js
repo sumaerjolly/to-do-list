@@ -201,8 +201,7 @@ clearCompleteTasksButton.addEventListener('click', () => {
 
 const newTaskTitle = document.querySelector('[data-new-task-title]');
 const newTaskDescription = document.querySelector(
-  '[data-new-task-description]',
-);
+  '[data-new-task-description]');
 const newTaskDueDate = document.querySelector('[data-new-task-dueDate]');
 const newTaskPriority = document.querySelector('[data-new-task-priority]');
 const submitForm = document.getElementById('submit');
