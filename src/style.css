@@ -327,9 +327,53 @@ a:hover {
 .delete-task-button {
   display: block;
 }
+.edit-task-button {
+  display: block;
+}
 
 .complete-task {
   position: absolute;
   right: 20px;
   font-size: 0.5em;
+}
+
+.position-right {
+  position: absolute;
+  right: 0;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.edit-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  z-index: 10;
+  background-color: var(--clr-dark);
+  width: 500px;
+  max-width: 80%;
+}
+
+#overlay {
+  position: fixed;
+  /* opacity: 0; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+#edit-checkbox {
+  opacity: 1;
 }

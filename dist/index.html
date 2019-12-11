@@ -133,6 +133,31 @@
         </div>
       </div>
     </div>
+
+    <form action="" class="edit-form hidden">
+      <p>Edit Task</p>
+      <div class="inputDiv">
+        <input
+          type="text"
+          class="new task"
+          aria-label="new task name"
+          id="edit-title"
+        />
+      </div>
+      <div class="inputDiv">
+        <input type="text" class="new task" id="edit-description" />
+      </div>
+      <div class="inputDiv">
+        <input type="date" name="" class="new task" id="edit-date" />
+      </div>
+      <div class="inputDiv">
+        <input type="checkbox" name="priority" id="edit-checkbox" />
+        <label class="formLabel" for="priority">Priority</label>
+      </div>
+      <button id="edit-form-submit">Submit</button>
+      <button id="edit-form-cancel">Cancel</button>
+    </form>
+
     <template id="task-template">
       <div class="task">
         <!-- <input type="checkbox" /> -->
@@ -146,6 +171,8 @@
     <template id="priority-template">
       <span class="priority"><i class="fas fa-flag red-icon"></i></span>
     </template>
+
+    <div id="overlay" class="hidden"></div>
 
     <script src="./main.js"></script>
   </body>
