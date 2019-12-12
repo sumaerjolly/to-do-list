@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To Do List</title>
+    <script
+      src="https://kit.fontawesome.com/da59169234.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <h1 class="title">Stuff I need to do</h1>
+
+    <div class="all-tasks">
+      <h2 class="task-list-title">My Projects</h2>
+      <ul class="task-list" data-lists>
+        <!-- <li class="list-name active-list">Project 1</li>
+        <li class="list-name">Project 2</li>
+        <li class="list-name">Project 3</li> -->
+      </ul>
+
+      <form action="" data-new-list-form>
+        <input
+          type="text"
+          class="new list"
+          placeholder="new list name"
+          aria-label="new list name"
+          data-new-list-input
+        />
+        <button class="btn create" aria-label="create new list">+</button>
+      </form>
+    </div>
+
+    <div class="todo-list" data-list-display-container>
+      <div class="todo-header">
+        <h2 class="list-title" data-list-title>Project 1</h2>
+        <p class="task-count" data-list-count>3 tasks remaining</p>
+      </div>
+
+      <div class="todo-body">
+        <div class="tasks" data-tasks>
+          <div class="task">
+            <input type="checkbox" id="task-1" />
+            <label for="task-1">
+              <span class="custom-checkbox"></span>
+              write js code for to do list
+            </label>
+            <span class="delete-icon"><i class="fas fa-trash"></i></span>
+            <span class="priority"><i class="fas fa-flag red-icon"></i></span>
+          </div>
+          <!-- /task-1 ends here -->
+
+          <div class="task">
+            <input type="checkbox" id="task-2" />
+            <label for="task-2">
+              <span class="custom-checkbox"></span>
+              another task
+            </label>
+            <span class="delete-icon"><i class="fas fa-trash"></i></span>
+            <span class="priority"><i class="far fa-flag"></i></span>
+          </div>
+          <!-- /task-2 ends here -->
+
+          <div class="task">
+            <input type="checkbox" id="task-3" />
+            <label for="task-3">
+              <span class="custom-checkbox"></span>
+              a third task
+            </label>
+          </div>
+          <!-- /task-3 ends here-->
+        </div>
+
+        <!-- New Tasks Creator Starts Here -->
+
+        <div class="new-task-creator">
+          <button id="formBtn" class="btn create" aria-label="create new task">
+            + <span id="btnSpan"> Add new task</span>
+          </button>
+          <form id="form" action="" data-new-task-form>
+            <div class="inputDiv">
+              <input
+                type="text"
+                class="new task"
+                data-new-task-title
+                placeholder="new task name"
+                aria-label="new task name"
+                id="task-title"
+              />
+            </div>
+            <div class="inputDiv">
+              <input
+                type="text"
+                placeholder="new task description"
+                data-new-task-description
+                class="new task"
+                id="task-description"
+              />
+            </div>
+            <div class="inputDiv">
+              <input
+                type="date"
+                name=""
+                id="task-dueDate"
+                class="new task"
+                data-new-task-dueDate
+              />
+            </div>
+            <div class="inputDiv">
+              <input
+                type="checkbox"
+                name="priority"
+                id="task-priority"
+                data-new-task-priority
+              />
+              <label class="formLabel" for="priority">Priority</label>
+            </div>
+            <button id="submit">Submit</button>
+            <button id="cancel-form">Cancel</button>
+          </form>
+        </div>
+
+        <div class="delete-stuff">
+          <button class="btn delete" data-clear-complete-tasks-button>
+            Clear completed tasks
+          </button>
+          <button class="btn delete" data-delete-list-button>
+            Delete list
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <form action="" class="edit-form hidden">
+      <p>Edit Task</p>
+      <div class="inputDiv">
+        <input
+          type="text"
+          class="new task"
+          aria-label="new task name"
+          id="edit-title"
+        />
+      </div>
+      <div class="inputDiv">
+        <input type="text" class="new task" id="edit-description" />
+      </div>
+      <div class="inputDiv">
+        <input type="date" name="" class="new task" id="edit-date" />
+      </div>
+      <div class="inputDiv">
+        <input type="checkbox" name="priority" id="edit-checkbox" />
+        <label class="formLabel" for="priority">Priority</label>
+      </div>
+      <button id="edit-form-submit">Submit</button>
+      <button id="edit-form-cancel">Cancel</button>
+    </form>
+
+    <template id="task-template">
+      <div class="task">
+        <!-- <input type="checkbox" /> -->
+        <ul>
+          <li class="test-add"></li>
+          <div class="description hidden"></div>
+        </ul>
+      </div>
+    </template>
+
+    <template id="priority-template">
+      <span class="priority"><i class="fas fa-flag red-icon"></i></span>
+    </template>
+
+    <div id="overlay" class="hidden"></div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
